@@ -10,7 +10,9 @@ public class Main {
 
         BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 
-        SuperShip ship = new SuperShip(3);
+        int randomLength = (int) (Math.random() * 3 + 3); // 3 - 5
+
+        SuperShip ship = new SuperShip(randomLength);
         
         System.out.println("The game has begun! Ship 3 cells long established");
         int userStep = 0;
@@ -25,5 +27,6 @@ public class Main {
                 break;
             }
         }
+        sc.readLine();
     }
 }

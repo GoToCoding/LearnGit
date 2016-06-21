@@ -1,1 +1,1 @@
-java -cp %~dp0start.jar GoToCoding.Main
+java -cp %~dp0game.jar GoToCoding.Main
