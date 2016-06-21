@@ -1,0 +1,2 @@
+1) make - jar cf start.jar GoToCoding\*.class
+2) starting - java -cp start.jar GoToCoding.Main
