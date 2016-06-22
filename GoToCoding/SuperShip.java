@@ -6,23 +6,19 @@ import java.util.HashSet;
  * Created by User-pc on 21.06.2016.
  */
 public class SuperShip {
-    private HashSet<Integer> place;
+    private HashSet<String> place;
     public String Action(String act) {
+
+        //TODO: check string(is it correct action? (C5, A5, A1), not(C 5, 5C, A0, CC5, c5 etc))
+
         String res = "Missed.";
-        int x;
-        try {
-            x = Integer.parseInt(act);
-        }
-        catch (Exception e) {
-            return "You`ve entered not a number";
-        }
 
-        if(place.contains(x)) {
+        if (place.contains(act)) {
             res = "Right on target!";
-            place.remove(x);
+            place.remove(act);
         }
 
-        if(place.isEmpty()) {
+        if (place.isEmpty()) {
             res = "Flooded the entire ship!";
         }
 
@@ -30,9 +26,15 @@ public class SuperShip {
     }
     public SuperShip(int length) {
         this.place = new HashSet<>();
-        int randomX = (int) (Math.random() * 5) + 1;
-        for(int i = 0; i < length; i++) {
-            this.place.add(randomX + i);
+        Integer randomX = (int) (Math.random() * 5) + 1;
+        for (int i = 0; i < length; i++) {
+            this.place.add(String.valueOf(randomX + i));
+        }
+    }
+    public SuperShip(String[] coordinates) {
+        this.place = new HashSet<>();
+        for (String s : coordinates) {
+            this.place.add(s);
         }
     }
 }
