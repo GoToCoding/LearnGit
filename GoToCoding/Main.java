@@ -3,6 +3,7 @@ package GoToCoding;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -10,19 +11,19 @@ public class Main {
 
         BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 
-        int randomLength = (int) (Math.random() * 3 + 3); // 3 - 5
+        gameHelper.createMap();
 
-        SuperShip ship = new SuperShip(randomLength);
-        
-        System.out.println("The game has begun! Ship 3 cells long established");
+        System.out.println("The game has begun! Ship 3 cells long established\n" +
+        "We have a map 7x7\n" +
+        "You can shot writing A1, A2 or G7\nWe have map A1-G7\n");
         int userStep = 0;
-        while(true) {
+        while (true) {
             userStep++;
-            System.out.println("Enter the coordinate: ");
+            System.out.println("Enter the coordinates: ");
             String userString = sc.readLine();
-            String res = ship.Action(userString);
+            String res = gameHelper.giveResult(userString);
             System.out.println(res);
-            if(res.equals("Flooded the entire ship!")) {
+            if(res.equals("You have flooded all ships!")) {
                 System.out.println("You`re used " + userStep + " shots");
                 break;
             }
