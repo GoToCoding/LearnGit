@@ -3,17 +3,18 @@ package GoToCoding;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        System.out.println("Hi");
+
         BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 
         gameHelper.createMap();
 
-        System.out.println("The game has begun! Ship 3 cells long established\n" +
+        System.out.println("The game has begun! 3 Ship 4 cells long established\n" +
         "We have a map 7x7\n" +
         "You can shot writing A1, A2 or G7\nWe have map A1-G7\n");
         int userStep = 0;
