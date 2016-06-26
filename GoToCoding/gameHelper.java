@@ -49,7 +49,7 @@ public class gameHelper {
                         place[j] = new String(String.valueOf(cx));
                         place[j] += ty;
                         used[tx][ty - 1] = true;
-                        System.out.println(place[j]);
+                        //System.out.println(place[j]);
                     }
                     res.add(new SuperShip(place));
 
