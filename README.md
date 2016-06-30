@@ -3,5 +3,6 @@
 Hello!
 It is my first git repository =)
 
-Author Ruzal Ibragimov \n
+Author Ruzal Ibragimov
+
 Автор Рузаль Ибрагимов
