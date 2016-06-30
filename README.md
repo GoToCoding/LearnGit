@@ -1,6 +1,7 @@
 # LearnGit
+
 Hello!
 It is my first git repository =)
 
-Autor Ruzal Ibragimov
+Author Ruzal Ibragimov \n
 Автор Рузаль Ибрагимов
